@@ -74,6 +74,18 @@ extern ManagedStatic<CryptoUtils> cryptoutils;
 #define ENDIAN_32BITWORD
 #endif
 
+#elif defined(__arm__)
+
+#ifndef ENDIAN_LITTLE
+#define ENDIAN_LITTLE
+#endif
+#define ENDIAN_32BITWORD
+#elif defined(__aarch64__)
+#ifndef ENDIAN_LITTLE
+#define ENDIAN_LITTLE
+#endif
+#define ENDIAN_64BITWORD
+
 #endif
 
 #if defined(__BIG_ENDIAN__) || defined(_BIG_ENDIAN)

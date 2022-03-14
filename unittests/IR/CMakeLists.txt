@@ -1,4 +1,6 @@
 set(LLVM_LINK_COMPONENTS
+  Obfuscation
+  TransformUtils
   Analysis
   AsmParser
   Core
